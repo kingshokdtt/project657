@@ -13,8 +13,10 @@ export default function App() {
   }
 
   function addGoalHandler() {
-    setCourseGoals([...courseGoals,enteredGoalText]);
-
+    setCourseGoals(currentCourseGoals => [
+      ...currentCourseGoals,
+      enteredGoalText,
+    ]);
   }
 
 
@@ -30,7 +32,7 @@ export default function App() {
       </View>
 
       <View style={styles.goalsContainer}>
-        <Text>List of goals...</Text>
+        {courseGoals.map((goal) => <Text>{goal}</Text> )}
       </View>
     </View>
   );
