@@ -28,7 +28,7 @@ export default function App() {
   return (
     <View style={styles.appContainer}>
       <Button title='Add New Goal' color="gray" onPress={startAddGoalHandler}/>
-      {modalIsVisible && <GoalInput onAddGoal ={addGoalHandler} />}   
+      <GoalInput visible={modalIsVisible} onAddGoal ={addGoalHandler} />   
       <View style={styles.goalsContainer}>
 
         <FlatList 
