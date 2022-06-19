@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, FlatList } from 'react-native';
 import GoalItem from './component/GoalItem';
 import GoalInput from './component/GoalInput';
@@ -16,6 +15,10 @@ export default function App() {
     ]);
   }
 
+  function deleteGoalHandler() {
+    console.log('Delete');
+  }
+
 
   return (
     <View style={styles.appContainer}>
@@ -25,7 +28,12 @@ export default function App() {
         <FlatList 
           data={courseGoals} 
           renderItem={(itemData) =>{
-            return <GoalItem text={itemData.item.text}/>;
+            return (
+              <GoalItem 
+                text={itemData.item.text} 
+                onDeleteItem={deleteGoalHandler}
+              />
+            );    
 
           }}
           keyExtractor={(item,index) => {
