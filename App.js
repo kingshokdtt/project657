@@ -7,6 +7,7 @@ import { StyleSheet, View, FlatList, Button, Image, Text} from 'react-native';
 
 import GoalItem from './component/GoalItem';
 import GoalInput from './component/GoalInput';
+import { ImageBackground } from 'react-native-web';
 
 export default function App() {
   const [modalIsVisible, setModalIsVisible] = useState(false);
@@ -38,14 +39,13 @@ export default function App() {
     <>
       <StatusBar style='light' />
       <View style={styles.appContainer2}>
-        <Image style={styles.image2} source={require('../project657/assets/image.png')}/>
+        <Image style={styles.logo} source={require('../project657/assets/book.png')}/>
         <Text style={styles.logoName}>LIST n RUN</Text>
       </View>
       <View style={styles.appContainer}>
-        
-        
+      
         <Button title='Add New Goal' color="gray" onPress={startAddGoalHandler}/>
-        <GoalInput visible={modalIsVisible} onAddGoal ={addGoalHandler} onCancel={endAddGoalHandler}/>   
+        <GoalInput visible={modalIsVisible} onAddGoal ={addGoalHandler} onCancel={endAddGoalHandler}/>  
         <View style={styles.goalsContainer}>
 
           <FlatList 
@@ -97,11 +97,12 @@ const styles = StyleSheet.create({
   goalsContainer:{
     flex:4,
   },
-  image2:{
-    width:150,
-    height:75,
+  logo:{
+    width:160,
+    height:150,
     padding:50,
     
   },
+
 
 });
