@@ -2,12 +2,19 @@ import React from 'react';
 import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, FlatList, Button } from 'react-native';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './screens/Home/index.jsx';
+import ProfileScreen from './screens/Profile/index.jsx';
+
 import GoalItem from './component/GoalItem';
 import GoalInput from './component/GoalInput';
 
 export default function App() {
   const [modalIsVisible, setModalIsVisible] = useState(false);
   const [courseGoals, setCourseGoals] = useState([]);
+  const Stack = createNativeStackNavigator();
 
   function startAddGoalHandler () {
     setModalIsVisible(true);
@@ -56,6 +63,24 @@ export default function App() {
           /> 
         </View>
       </View>
+      <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ title: 'Want to be Rich!!!'}}
+        />
+        
+        <Stack.Screen 
+          name="Profile" 
+          component={ProfileScreen}
+          options={{title:'Done'}} 
+        />     
+        
+
+      </Stack.Navigator>
+
+    </NavigationContainer>
     </>
   );
 }
