@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, FlatList, Button, Image} from 'react-native';
+import { StyleSheet, View, FlatList, Button, Image, Text} from 'react-native';
 
 
 
@@ -39,6 +39,7 @@ export default function App() {
       <StatusBar style='light' />
       <View style={styles.appContainer2}>
         <Image style={styles.image2} source={require('../project657/assets/image.png')}/>
+        <Text style={styles.logoName}>LIST n RUN</Text>
       </View>
       <View style={styles.appContainer}>
         
@@ -84,6 +85,12 @@ const styles = StyleSheet.create({
     paddingHorizontal:16,
     alignItems:'center',
 
+    
+  },
+  logoName:{
+    fontSize:30,
+    fontWeight:'bold',
+    color:'#8b008b',
     
   },
   

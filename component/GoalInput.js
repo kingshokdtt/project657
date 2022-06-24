@@ -60,13 +60,16 @@ const styles = StyleSheet.create({
         borderRadius:6,
         width:'100%',
         padding: 16,
+        fontSize:20,
       },
       buttonContainer:{
         marginTop:16,
         flexDirection:'row',
+        fontSize:15,
       },
       button:{
         width:100,
         marginHorizontal:8,
+        fontSize:15,
       }
 })
