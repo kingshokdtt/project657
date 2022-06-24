@@ -64,8 +64,10 @@ export default function App() {
             }} 
             alwaysBounceVertical={false}
           /> 
-        </View>
+
+        </View>      
       </View>
+      <Text style={styles.bottomName}>LIST n RUN</Text>
       
     </>
   );
@@ -73,7 +75,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   appContainer:{
-    flex:1,
+    height:500,
     paddingTop:50,
     paddingHorizontal:16,
     backgroundColor:'#5f9ea0',
@@ -101,6 +103,13 @@ const styles = StyleSheet.create({
     width:160,
     height:150,
     padding:50,
+    
+  },
+  bottomName:{
+    fontSize:20,
+    fontWeight:'bold',
+    color:'#8b008b',
+    paddingLeft:1000,
     
   },
 
