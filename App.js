@@ -80,8 +80,8 @@ const styles = StyleSheet.create({
   },
   appContainer2:{
  
-    paddingTop:20,
-    paddingBottom:20,
+    paddingTop:30,
+    paddingBottom:10,
     paddingHorizontal:16,
     alignItems:'center',
 
