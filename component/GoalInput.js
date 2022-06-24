@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         backgroundColor:'#311b6b',
       },
       image:{
-        width:100,
+        width:200,
         height:100,
         margin:20,
       },

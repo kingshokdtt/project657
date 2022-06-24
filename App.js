@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, FlatList, Button } from 'react-native';
+import { StyleSheet, View, FlatList, Button, Image} from 'react-native';
 
 
 
@@ -37,7 +37,12 @@ export default function App() {
   return (
     <>
       <StatusBar style='light' />
+      <View style={styles.appContainer2}>
+        <Image style={styles.image2} source={require('../project657/assets/image.png')}/>
+      </View>
       <View style={styles.appContainer}>
+        
+        
         <Button title='Add New Goal' color="gray" onPress={startAddGoalHandler}/>
         <GoalInput visible={modalIsVisible} onAddGoal ={addGoalHandler} onCancel={endAddGoalHandler}/>   
         <View style={styles.goalsContainer}>
@@ -70,11 +75,26 @@ const styles = StyleSheet.create({
     flex:1,
     paddingTop:50,
     paddingHorizontal:16,
+    backgroundColor:'#5f9ea0',
+  },
+  appContainer2:{
+ 
+    paddingTop:20,
+    paddingBottom:20,
+    paddingHorizontal:16,
+    alignItems:'center',
+
+    
   },
   
   goalsContainer:{
     flex:4,
   },
-
+  image2:{
+    width:150,
+    height:75,
+    padding:50,
+    
+  },
 
 });

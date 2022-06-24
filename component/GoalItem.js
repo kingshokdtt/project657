@@ -23,8 +23,7 @@ const styles =StyleSheet.create({
     goalItem:{
         margin:8,
         borderRadius: 6,
-        backgroundColor: '#5e0acc',
-        
+        backgroundColor:'#5e0acc',
         color:'white'
       },
       pressedItem:{
@@ -34,5 +33,6 @@ const styles =StyleSheet.create({
       goalText:{
         color:'white',
         padding:8,
+        fontSize:20,
       },
 })
