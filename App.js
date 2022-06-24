@@ -38,7 +38,7 @@ export default function App() {
     <>
       <StatusBar style='light' />
       <View style={styles.appContainer}>
-        <Button title='Addd New Goal' color="gray" onPress={startAddGoalHandler}/>
+        <Button title='Add New Goal' color="gray" onPress={startAddGoalHandler}/>
         <GoalInput visible={modalIsVisible} onAddGoal ={addGoalHandler} onCancel={endAddGoalHandler}/>   
         <View style={styles.goalsContainer}>
 
