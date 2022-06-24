@@ -7,7 +7,7 @@ import { StyleSheet, View, FlatList, Button, Image, Text} from 'react-native';
 
 import GoalItem from './component/GoalItem';
 import GoalInput from './component/GoalInput';
-import { ImageBackground } from 'react-native-web';
+
 
 export default function App() {
   const [modalIsVisible, setModalIsVisible] = useState(false);
@@ -75,7 +75,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   appContainer:{
-    height:500,
+    height:400,
     paddingTop:50,
     paddingHorizontal:16,
     backgroundColor:'#5f9ea0',
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     fontSize:20,
     fontWeight:'bold',
     color:'#8b008b',
-    paddingLeft:1000,
+    paddingLeft:200,
     
   },
 
