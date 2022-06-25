@@ -44,10 +44,11 @@ export default function App() {
       </View>
       <View style={styles.appContainer}>
       
-        <Button title='Add New Goal' color="gray" onPress={startAddGoalHandler}/>
+        <Button title='Add New List' color="gray" onPress={startAddGoalHandler}/>
         <GoalInput visible={modalIsVisible} onAddGoal ={addGoalHandler} onCancel={endAddGoalHandler}/>  
+        
         <View style={styles.goalsContainer}>
-
+          
           <FlatList 
             data={courseGoals} 
             renderItem={(itemData) => {
@@ -63,11 +64,15 @@ export default function App() {
               return item.id;
             }} 
             alwaysBounceVertical={false}
-          /> 
+          
+          />
 
         </View>      
       </View>
-      <Text style={styles.bottomName}>LIST n RUN</Text>
+      <Text style={styles.bottomName}>The app that keeps you on track</Text>
+      
+      
+      
       
     </>
   );
