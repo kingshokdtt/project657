@@ -69,7 +69,7 @@ export default function App() {
 
         </View>      
       </View>
-      <Text style={styles.bottomName}>The app that keeps you on track</Text>
+      <Text style={styles.bottomName}>Click on list to DELETE</Text>
       
       
       
@@ -80,8 +80,8 @@ export default function App() {
 
 const styles = StyleSheet.create({
   appContainer:{
-    height:400,
-    paddingTop:50,
+    height:430,
+    paddingTop:40,
     paddingHorizontal:16,
     backgroundColor:'#5f9ea0',
   },
@@ -89,7 +89,6 @@ const styles = StyleSheet.create({
  
     paddingTop:30,
     paddingBottom:10,
-    paddingHorizontal:16,
     alignItems:'center',
 
     
@@ -114,7 +113,7 @@ const styles = StyleSheet.create({
     fontSize:20,
     fontWeight:'bold',
     color:'#8b008b',
-    paddingLeft:200,
+    paddingLeft:80,
     
   },
 
